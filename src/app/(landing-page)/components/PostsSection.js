@@ -31,20 +31,20 @@ const PostsSection = async () => {
             Latest Blog <br />
           </h2>
         </div>
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-12">
+        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-12 ">
           {posts.docs.map((post) => (
             <Link
               href={`/posts/${post.id}`}
               key={post.id}
-              className="group block"
+              className="group block border border-primary-500 p-5 rounded-lg group-hover:bg-primary-500 duration-300 transition-all hover:bg-primary-500"
             >
               <article className="space-y-4">
-                <h3 className="texl-lg md:text-2xl font-semibold text-light group-hover:text-primary-400 transition-colors mb-3">
+                <h3 className="texl-lg text-primary-400 md:text-2xl font-semibold text-light group-hover:text-white mb-3 duration-300 transition-all">
                   {post.title}
                 </h3>
               </article>
               <div>
-                <time className="text-slate-300">
+                <time className="text-slate-300 group-hover:text-white">
                   {formatDate(post.createdAt)}
                 </time>
               </div>
