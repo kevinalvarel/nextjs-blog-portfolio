@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { Typewriter } from "react-simple-typewriter";
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
@@ -41,12 +42,22 @@ const HeroSection = () => {
         <div className="absolute top-4 right-4 sm:w-[400px] sm:h-[400px] w-[150px] h-[150px] bg-primary-500/60 rounded-full blur-2xl"></div>
         <div className="absolute top-8 right-8 sm:w-[300px] sm:h-[300px] w-[100px] h-[100px] bg-primary-400/70 rounded-full blur-xl"></div>
       </div>
-      <h1 className="text-4xl font-bold tracking-light">
-        Software Engineer and <span className="block text-primary-600">UI/UX Designer</span>
+      <h1 className="text-7xl font-bold tracking-light text-primary-500">
+        Hello, i&apos;m <br />
       </h1>
-      <p className="mt-6 text-xl text-gray-300 leading-8">
-        Crafting Responsive Websites for Real Estate Professionals | Innovating with AI Solutions
-        for the Future of Property Tech
+      <h2 className="text-7xl font-semibold">
+        <Typewriter
+          words={["Kevin", "Frontend Developer", "UI/UX Designer"]}
+          loop={0}
+          cursor
+          cursorStyle="|"
+          typeSpeed={100}
+          deleteSpeed={30}
+          delaySpeed={1000}
+        />
+      </h2>
+      <p className="pt-5 text-gray-500">
+        I&apos;m a frontend developer, and i still learning for Fullstack hehe
       </p>
       <div className="flex mt-10 gap-4">
         <Link
@@ -55,9 +66,6 @@ const HeroSection = () => {
         >
           About Me
         </Link>
-        <button className="px-8 py-3 rounded-lg border border-gray-600 hover:border-primary-500 font-medium bg-slate-900">
-          Contact Me
-        </button>
       </div>
     </div>
   );

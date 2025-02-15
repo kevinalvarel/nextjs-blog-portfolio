@@ -5,63 +5,36 @@ const ProjectSection = () => {
   const projects = [
     {
       id: 1,
-      title: "AI Summarization Tool",
-      tags: ["AWS", "React", "Cloudflare"],
-      description: "A tool that summarizes long articles into short paragraphs using AI.",
+      title: "Coffee Shop",
+      tags: ["Vite", "React", "TailwindCSS"],
+      description: "Landing Page for Coffeee Shop",
       fullDescription:
-        "This project uses AWS Lambda functions to process text data and return a summarized version of the content. The front-end is built with React and hosted on Cloudflare Pages.",
-      image: "/summarization.png",
-      techStack: ["React", "AWS", "Cloudflare", "TailwindCSS", "NodeJS"],
+        "This project uses Tailwind CSS and Vite + React for front-end ",
+      image: "/CoffeeShop.png",
+      link: "https://neggvscoffee.netlify.app/",
+      techStack: ["React", "Vite", "Tailwind"],
     },
     {
       id: 2,
-      title: "Newsletter App",
-      tags: ["NextJs", "Cloudflare", "PayloadCMS"],
-      description: "A newsletter app that sends daily updates to subscribers.",
+      title: "Ecommerce",
+      tags: ["NextJs", "React", "TailwindCSS"],
+      description: "Ecommerce landing page with Single Page Application",
       fullDescription:
-        "This project uses NextJS to build the front-end and PayloadCMS to manage content. The app is hosted on Cloudflare Workers.",
-      image: "/proj.png",
-      techStack: ["NextJS", "Cloudflare", "PayloadCMS", "TailwindCSS", "NodeJS", "TypeScript"],
+        "This project uses NextJS to build the front-end and Tailwind CSS for Styling",
+      image: "/Ecommerce.png",
+      link: "https://epocaid.netlify.app/",
+      techStack: ["NextJS", "TailwindCSS"],
     },
     {
       id: 3,
-      title: "Feedback Platform",
-      tags: ["TS", "Postgres", "DrizzleORM"],
-      description: "A platform for collecting feedback from users.",
+      title: "Anime List",
+      tags: ["NextJs", "React", "Typescript", "TailwindCSS"],
+      description: "Anime List with pagination, and searchbar feature",
       fullDescription:
-        "This project uses TypeScript and Postgres to store user feedback. DrizzleORM is used to manage the database schema.",
-      image: "/feedback.png",
-      techStack: ["TypeScript", "Postgres", "DrizzleORM", "TailwindCSS", "NodeJS", "Stripe API"],
-    },
-    {
-      id: 4,
-      title: "AI Quiz Generator",
-      tags: ["TS", "NextJS", "DrizzleORM"],
-      description: "A quiz generator that uses AI to generate questions.",
-      fullDescription:
-        "This project uses TypeScript and NextJS to build the front-end. Langchain is used to manage AI requests and responses.",
-      image: "/quiz.png",
-      techStack: ["TypeScript", "NextJS", "OpenAI", "TailwindCSS", "NodeJS", "Stripe API"],
-    },
-    {
-      id: 5,
-      title: "Form Builder Tool",
-      tags: ["NextJS", "React", "TailwindCSS", "Prisma"],
-      description: "A tool that allows users to create custom forms.",
-      fullDescription:
-        "This project uses NextJS and React to build the front-end. Prisma is used to manage the database schema.",
-      image: "/form.png",
-      techStack: ["NextJS", "React", "Prisma", "TailwindCSS", "NodeJS", "Stripe API"],
-    },
-    {
-      id: 6,
-      title: "Blog Website",
-      tags: ["MDX", "NextJS", "TailwindCSS", "Framer Motion"],
-      description: "A blog website with animated page transitions.",
-      fullDescription:
-        "This project uses MDX and NextJS to build the front-end. Framer Motion is used to create page transitions.",
-      image: "/blog.png",
-      techStack: ["MDX", "NextJS", "Framer Motion", "TailwindCSS", "NodeJS", "Stripe API"],
+        "This project uses NextJS to build the front-end and consuming public API",
+      image: "/AnimeList.png",
+      link: "https://listanime-kohl.vercel.app/",
+      techStack: ["NextJS", "TailwindCSS", "Typescript"],
     },
   ];
 
@@ -76,7 +49,9 @@ const ProjectSection = () => {
   };
 
   const handleNextProject = () => {
-    const currentIndex = projects.findIndex((project) => project.id === selectedProject);
+    const currentIndex = projects.findIndex(
+      (project) => project.id === selectedProject
+    );
 
     if (currentIndex === -1) {
       return null;
@@ -88,7 +63,9 @@ const ProjectSection = () => {
   };
 
   const handlePrevProject = () => {
-    const currentIndex = projects.findIndex((project) => project.id === selectedProject);
+    const currentIndex = projects.findIndex(
+      (project) => project.id === selectedProject
+    );
 
     if (currentIndex === -1) {
       return null;
@@ -100,11 +77,10 @@ const ProjectSection = () => {
   };
 
   return (
-    <section
-      id="projects"
-      className="px-4 py-32 sm:px-6 lg:px-8"
-    >
-      <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Projects</h2>
+    <section id="projects" className="px-4 py-36 sm:px-6 lg:px-8">
+      <h2 className="text-3xl font-bold text-white mb-12 text-center">
+        My Projects
+      </h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project, index) => (
           <button
@@ -113,7 +89,9 @@ const ProjectSection = () => {
             className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-primary-500/50 transition-colors hover:shadow-sm text-left"
           >
             <div className="flex flex-col h-full">
-              <h3 className="text-lg font-semibold text-white mb-2">{project.title}</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">
+                {project.title}
+              </h3>
               <div className="flex flex-wrap gap-1 mt-auto">
                 {project.tags.map((tag, index) => (
                   <span

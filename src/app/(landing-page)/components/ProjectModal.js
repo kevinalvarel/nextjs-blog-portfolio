@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { X, ChevronRight, ChevronLeft } from "lucide-react";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function ProjectModal({ project, onClose, onNext, onPrev }) {
   const modalRef = useRef();
@@ -23,7 +24,9 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between mb-3">
-          <h2 className="text-2xl font-bold text-primary-50">{project.title}</h2>
+          <h2 className="text-2xl font-bold text-primary-50">
+            {project.title}
+          </h2>
           <button
             onClick={onClose}
             className="text-primary-50 hover:text-primary-400 rounded-full
@@ -36,14 +39,21 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
           <div className="space-y-4 md:w-1/2">
             <p className="text-gray-300">{project.description}</p>
             <p className="text-gray-300">{project.fullDescription}</p>
+            <div className="py-4">
+              <Link
+                className="text-gray-300 hover:text-white pointer text-center"
+                href={project.link}
+              >
+                <button className=" font-bold flex items-center justify-center">
+                  Preview
+                </button>
+              </Link>
+            </div>
             <div>
               <h3 className="font-semibold mb-2 text-primary">Tech Stack:</h3>
               <ul className="list-disc list-inside">
                 {project.techStack.map((tech, index) => (
-                  <li
-                    key={index}
-                    className="text-gray-300"
-                  >
+                  <li key={index} className="text-gray-300">
                     {tech}
                   </li>
                 ))}

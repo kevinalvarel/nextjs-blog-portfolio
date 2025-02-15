@@ -1,8 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Header";
+
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import Navbar from "./components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="scroll-smooth"
+      style={{ scrollBehavior: "smooth" }}
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-slate-50`}
       >

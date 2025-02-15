@@ -1,7 +1,7 @@
 import ProjectSection from "./components/ProjectSection";
 import PostsSection from "./components/PostsSection";
-import Link from "next/link";
 import HeroSection from "./components/HeroSection";
+import About from "./components/About";
 
 export default function Home() {
   return (

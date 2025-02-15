@@ -24,15 +24,11 @@ const PostsSection = async () => {
   });
 
   return (
-    <div
-      className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8"
-      id="blog"
-    >
+    <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-15" id="blog">
       <div className="flex gap-12 sm:gap-24 md:flex-row flex-col">
         <div className="w-72">
           <h2 className="text-4xl font-bold text-light ">
-            Latest from <br />
-            the blog
+            Latest Blog <br />
           </h2>
         </div>
         <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-12">
@@ -48,7 +44,9 @@ const PostsSection = async () => {
                 </h3>
               </article>
               <div>
-                <time className="text-slate-300">{formatDate(post.createdAt)}</time>
+                <time className="text-slate-300">
+                  {formatDate(post.createdAt)}
+                </time>
               </div>
             </Link>
           ))}

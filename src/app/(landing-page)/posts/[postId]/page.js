@@ -22,11 +22,10 @@ const Page = async ({ params }) => {
 
   return (
     <div className="container mx-auto p-8 pb-20 sm:p-20">
-      <h1 className="text-5xl font-bold mb-5 leading-normal text-center">{data.title}</h1>
-      <SerializedRichText
-        className="payload-richtext"
-        data={data.content}
-      />
+      <h1 className="text-5xl font-bold mb-5 leading-normal text-center">
+        {data.title}
+      </h1>
+      <SerializedRichText className="payload-richtext" data={data.content} />
     </div>
   );
 };
