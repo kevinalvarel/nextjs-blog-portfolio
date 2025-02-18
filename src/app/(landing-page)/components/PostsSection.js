@@ -15,7 +15,7 @@ const PostsSection = async () => {
   const posts = await payload.find({
     collection: "posts",
     limit: 2,
-    sort: "-createdAt",
+    sort: "-updatedAt",
     where: {
       includedInBlog: {
         equals: true,
@@ -45,7 +45,7 @@ const PostsSection = async () => {
               </article>
               <div>
                 <time className="text-slate-300 group-hover:text-white">
-                  {formatDate(post.createdAt)}
+                  {formatDate(post.updatedAt)}
                 </time>
               </div>
             </Link>

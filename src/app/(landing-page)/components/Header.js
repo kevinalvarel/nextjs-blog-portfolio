@@ -5,7 +5,9 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const isSpecialPage = ["/about", "/blogs"].includes(pathname);
+  const isSpecialPage =
+    ["/about", "/blogs"].includes(pathname) ||
+    /^\/posts\/[^/]+$/.test(pathname);
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-gray-900 bg-opacity-100">
