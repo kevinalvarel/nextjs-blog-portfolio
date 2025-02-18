@@ -31,7 +31,7 @@ const PostsSection = async () => {
             Latest Blog <br />
           </h2>
         </div>
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-12 ">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 gap-12 ">
           {posts.docs.map((post) => (
             <Link
               href={`/posts/${post.id}`}
