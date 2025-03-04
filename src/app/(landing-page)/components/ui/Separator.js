@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollVelocity from "../animations/ScrollVelocity/ScrollVelocity";
+import ScrollVelocity from "../../animations/ScrollVelocity/ScrollVelocity";
 
 const Separator = () => {
   return (

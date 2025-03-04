@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -57,7 +56,11 @@ const HeroSection = () => {
         <h1 className="text-5xl font-semibold">
           I&apos;m&nbsp;
           <Typewriter
-            words={["Frontend Junior", "UI/UX Designer", "Backend Junior"]}
+            words={[
+              "Informatics Engineering Student",
+              "UI/UX Designer",
+              "Front End",
+            ]}
             loop={0}
             cursor
             cursorStyle="|"
