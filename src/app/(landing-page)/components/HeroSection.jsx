@@ -75,13 +75,13 @@ const HeroSection = () => {
         <div className="flex mt-10 gap-4">
           <button
             onClick={() => navigateTo("/about")}
-            className="p-4 border border-primary-500 bg-gradient-to-r from-[#1148c9] to-[#00a7a7] rounded-md hover:bg-gradient-to-l hover:rounded-lg transition-all duration-300"
+            className="button-primary"
           >
             About
           </button>
           <button
             onClick={() => navigateTo("/blogs")}
-            className="p-4 border border-primary-500 border-collapse rounded-md hover:rounded-lg transition-all duration-300"
+            className="button-secondary"
           >
             My Blog
           </button>
