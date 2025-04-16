@@ -81,7 +81,7 @@ const HeroSection = () => {
           </button>
           <button
             onClick={() => navigateTo("/blogs")}
-            className="button-secondary"
+            className="button-secondary hover:button-primary transition-all"
           >
             My Blog
           </button>
