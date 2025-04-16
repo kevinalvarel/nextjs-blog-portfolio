@@ -86,7 +86,7 @@ const ProjectSection = () => {
           <button
             onClick={() => handleProjectClick(project.id)}
             key={index}
-            className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-primary-500/50 transition-colors hover:shadow-sm text-left"
+            className="bg-gray-800/30 backdrop-blur-xs rounded-lg p-6 border border-gray-700/50 hover:border-primary-500/50 transition-colors hover:shadow-xs text-left"
           >
             <div className="flex flex-col h-full">
               <h3 className="text-lg font-semibold text-white mb-2">
