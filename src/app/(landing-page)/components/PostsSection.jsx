@@ -44,6 +44,9 @@ const PostsSection = async () => {
                 </h3>
               </article>
               <div>
+                <p className="text-gray-500 group-hover:text-white">
+                  Updated At
+                </p>
                 <time className="text-slate-300 group-hover:text-white">
                   {formatDate(post.updatedAt)}
                 </time>
