@@ -1,26 +1,35 @@
+"use client";
 import React from "react";
+import ScrollFloat from "./components/ScrollFloat";
+import BlurText from "./components/BlurText";
+import SplashCursor from "./components/SplashCursor";
 
 const Page = () => {
   return (
     <div className="container">
-      <div className="flex items-center justify-center">
-        <h1 className="font-bold text-3xl">About Me</h1>
-      </div>
-      <div className="grid grid-cols-2 mx-10 justify-items-center items-center py-5">
-        <h2 className="font-bold text-xl">Hi</h2>
-        <p className="text-center font-medium">
-          I am currently an Informatics student with a strong passion for
-          technology and problem-solving. As I delve deeper into the world of
-          computer science, I am particularly drawn to web development. I find
-          great joy in learning new programming languages, exploring web
-          technologies, and building interactive websites. My curiosity drives
-          me to stay updated with the latest trends in the industry, and I am
-          always eager to expand my knowledge and skills. Beyond just coding, I
-          enjoy the creative process of designing user-friendly interfaces and
-          ensuring that websites are both functional and visually appealing. In
-          the future, I aspire to leverage my skills to create innovative
-          solutions that can positively impact the digital world.
-        </p>
+      <div className="mx-10 justify-items-center items-center py-5">
+        <div className="py-36 md:py-40 sm:py-44 mb-28">
+          <BlurText
+            text="Hello"
+            delay={150}
+            animateBy="letters"
+            direction="bottom"
+            className="font-extrabold text-5xl"
+          />
+          <SplashCursor />
+        </div>
+        <div className="py-36 md:py-40 sm:py-44">
+          <ScrollFloat
+            animationDuration={1}
+            ease="back.inOut(2)"
+            scrollStart="center bottom+=80%"
+            scrollEnd="bottom bottom-=40%"
+            stagger={0.3}
+            textClassName="font-bold"
+          >
+            I'm Kevin
+          </ScrollFloat>
+        </div>
       </div>
     </div>
   );
