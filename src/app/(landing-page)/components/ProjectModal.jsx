@@ -41,10 +41,10 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
             <p className="text-gray-300">{project.fullDescription}</p>
             <div className="py-4">
               <Link
-                className="text-gray-300 hover:text-white pointer text-center"
+                className="text-gray-300 hover:text-white cursor-pointer text-center px-4"
                 href={project.link}
               >
-                <button className=" font-bold flex items-center justify-center">
+                <button className="font-bold flex items-center justify-center">
                   Preview
                 </button>
               </Link>

@@ -44,7 +44,7 @@ const ProjectSection = () => {
       fullDescription:
         "This project uses NextJS to build the front-end and TailwindCSS for styling",
       image: "/OnlineCourse.png",
-      link: "https://listanime-kohl.vercel.app/",
+      link: "https://online-course-git-master-kevin-alvarels-projects.vercel.app/",
       techStack: ["NextJS", "TailwindCSS", "Javascript"],
     },
   ];
