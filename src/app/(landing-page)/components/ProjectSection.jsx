@@ -36,6 +36,17 @@ const ProjectSection = () => {
       link: "https://listanime-kohl.vercel.app/",
       techStack: ["NextJS", "TailwindCSS", "Typescript"],
     },
+    {
+      id: 4,
+      title: "Online Course",
+      tags: ["NextJs", "React", "Javascript", "TailwindCSS"],
+      description: "Online Course landing page",
+      fullDescription:
+        "This project uses NextJS to build the front-end and TailwindCSS for styling",
+      image: "/OnlineCourse.png",
+      link: "https://listanime-kohl.vercel.app/",
+      techStack: ["NextJS", "TailwindCSS", "Javascript"],
+    },
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
