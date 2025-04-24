@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import ScrollFloat from "./components/ScrollFloat";
+import ScrollFloat from "../components/ui/ScrollFloat";
 
-import SplashCursor from "./components/SplashCursor";
+import SplashCursor from "../components/ui/SplashCursor";
 
 const Page = () => {
   return (
