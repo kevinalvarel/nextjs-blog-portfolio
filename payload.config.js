@@ -5,12 +5,11 @@ import { postgresAdapter } from "@payloadcms/db-postgres";
 import { buildConfig } from "payload";
 import { Posts } from "./src/app/collections/Posts";
 import { Media } from "@/app/collections/Media";
-import { Chapters } from "@/app/collections/Chapter";
 export default buildConfig({
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),
   // Define and configure your collections in this array
-  collections: [Posts, Media, Chapters],
+  collections: [Posts, Media],
   plugins: [
     vercelBlobStorage({
       enabled: true, // Optional, defaults to true
