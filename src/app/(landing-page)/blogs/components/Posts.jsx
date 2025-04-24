@@ -14,7 +14,7 @@ const Posts = async () => {
   const payload = await getPayload();
   const posts = await payload.find({
     collection: "posts",
-    limit: 2,
+    limit: 10,
     sort: "-updatedAt",
     where: {
       includedInBlog: {
