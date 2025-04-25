@@ -1,6 +1,7 @@
 "use client";
 import ProjectModal from "./ProjectModal";
 import { useState } from "react";
+import SpotlightCard from "./ui/SpotlightCard";
 const ProjectSection = () => {
   const projects = [
     {
@@ -92,12 +93,12 @@ const ProjectSection = () => {
       <h2 className="text-3xl font-bold text-white mb-12 text-center">
         My Projects
       </h2>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project, index) => (
-          <button
+          <SpotlightCard
             onClick={() => handleProjectClick(project.id)}
             key={index}
-            className="bg-gray-800/30 backdrop-blur-xs rounded-lg p-6 border border-gray-700/50 hover:border-primary-500/50 transition-colors hover:shadow-xs text-left"
+            className="bg-blue-500 backdrop-blur-xs rounded-lg p-6 border border-gray-700/50 hover:border-primary-500/50 transition-colors hover:shadow-xs text-left"
           >
             <div className="flex flex-col h-full">
               <h3 className="text-lg font-semibold text-white mb-2">
@@ -114,7 +115,7 @@ const ProjectSection = () => {
                 ))}
               </div>
             </div>
-          </button>
+          </SpotlightCard>
         ))}
       </div>
       {selectedProject && (
