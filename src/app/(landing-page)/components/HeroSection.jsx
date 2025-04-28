@@ -73,11 +73,8 @@ const HeroSection = () => {
           I&apos;m a frontend junior, and i still learning for Fullstack hehe
         </p>
         <div className="flex mt-10 gap-4">
-          <button
-            onClick={() => navigateTo("/about")}
-            className="button-primary"
-          >
-            About
+          <button className="button-primary">
+            <a href="">Download CV</a>
           </button>
           <button
             onClick={() => navigateTo("/blogs")}

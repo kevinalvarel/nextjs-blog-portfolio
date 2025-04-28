@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="w-full border-t border-gray-500">
-      <div className="container">
+      <div className="w-full flex justify-center items-center mx-auto">
         <div className="flex flex-col items-center justify-center py-8 gap-4">
           <div className="text-gray-500 text-center">
             <p>&copy; 2025 Kevin Alvarel. All rights reserved.</p>
