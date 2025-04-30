@@ -5,6 +5,9 @@ export const Media = {
     staticDir: "media", // Folder tempat menyimpan file (dalam project)
     mimeTypes: ["image/png", "image/jpeg", "image/webp"], // Jenis file yang diizinkan
   },
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       name: "alt",
