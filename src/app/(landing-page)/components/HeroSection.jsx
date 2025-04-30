@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Typewriter } from "react-simple-typewriter";
+import Link from "next/link";
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
@@ -76,12 +77,11 @@ const HeroSection = () => {
           <button className="button-primary">
             <a href="">Download CV</a>
           </button>
-          <button
-            onClick={() => navigateTo("/blogs")}
-            className="button-secondary hover:button-primary transition-all"
-          >
-            My Blog
-          </button>
+          <Link href={"/blogs"}>
+            <button className="button-secondary hover:button-primary transition-all">
+              My Blog
+            </button>
+          </Link>
         </div>
       </div>
     </section>

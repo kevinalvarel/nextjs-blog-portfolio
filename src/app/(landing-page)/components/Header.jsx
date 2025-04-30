@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Navbar = () => {
+const Header = () => {
   const pathname = usePathname();
   const isSpecialPage =
     ["/about", "/blogs"].includes(pathname) ||
@@ -49,4 +49,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
