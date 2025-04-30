@@ -30,7 +30,7 @@ const Posts = async () => {
         {posts.docs.map((post) => (
           <Link
             key={post.id}
-            href={`/post/${post.id}`}
+            href={`/posts/${post.id}`}
             className="group block border border-primary-500 p-8 rounded-xl transition-all duration-300 hover:bg-primary-500 hover:rounded-2xl"
           >
             <Image
