@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import Stack from "./components/Stack";
 import Separator from "./components/ui/Separator";
 import Wave from "./components/ui/Wave";
+import HoverText from "./components/HoverText";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Stack />
       <Separator />
       <ProjectSection />
+      <HoverText />
       <PostsSection />
     </div>
   );
