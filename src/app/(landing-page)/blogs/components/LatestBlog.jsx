@@ -16,6 +16,7 @@ const LatestBlog = async () => {
   const payload = await getPayload();
   const posts = await payload.find({
     collection: "posts",
+    sort: "-createdAt",
     limit: 3,
     where: {
       includedInBlog: {
@@ -28,7 +29,7 @@ const LatestBlog = async () => {
   return (
     <section id="blog" className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <div className="py-6">
-        <h1 className="md:text-4xl sm:text-5xl font-bold">Blog Terbaru</h1>
+        <h1 className="lg:text-2xl md:text-4xl font-bold">Blog Terbaru</h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {posts.docs.map((post) => (

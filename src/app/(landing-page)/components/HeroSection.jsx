@@ -78,7 +78,7 @@ const HeroSection = () => {
             <a href="">Download CV</a>
           </button>
           <Link href={"/blogs"}>
-            <button className="button-secondary hover:button-primary transition-all">
+            <button className="button-secondary hover:button-primary transition-all cursor-pointer">
               My Blog
             </button>
           </Link>
