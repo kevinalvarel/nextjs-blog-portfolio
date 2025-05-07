@@ -3,7 +3,6 @@ import "./globals.css";
 
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
-import Header from "./components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +29,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-slate-50`}
       >
-        <Header />
         <div className="mt-7 md:mt-20">{children}</div>
         <Footer />
         <Analytics />
