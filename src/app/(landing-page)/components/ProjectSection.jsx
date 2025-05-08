@@ -98,7 +98,7 @@ const ProjectSection = () => {
           <SpotlightCard
             onClick={() => handleProjectClick(project.id)}
             key={index}
-            className="bg-blue-500 backdrop-blur-xs rounded-lg p-6 border border-gray-700/50 hover:border-primary-500/50 transition-colors hover:shadow-xs text-left"
+            className="cursor-pointer bg-blue-500 backdrop-blur-xs rounded-lg p-6 border border-gray-700/50 hover:border-primary-500/50 transition-colors hover:shadow-xs text-left"
           >
             <div className="flex flex-col h-full">
               <h3 className="text-lg font-semibold text-white mb-2">

@@ -1,43 +1,93 @@
 "use client";
 
-import Link from "next/link";
+import { useState } from "react";
+import {
+  MobileNav,
+  MobileNavHeader,
+  MobileNavMenu,
+  MobileNavToggle,
+  Navbar,
+  NavbarButton,
+  NavbarLogo,
+  NavBody,
+  NavItems,
+} from "./ui/resizable-navbar";
 
 const Header = () => {
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "Stack",
+      link: "#stack",
+    },
+    {
+      name: "Project",
+      link: "#projects",
+    },
+    {
+      name: "Blogs",
+      link: "/blogs",
+    },
+  ];
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-gray-900 bg-opacity-100">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto py-2 p-8 md:p-12 lg:p-20">
-        <Link
-          href="/"
-          className="text-2xl md:text-2xl text-white font-bold hover:text-primary-500 duration-300 transition-all"
-        >
-          Kevin Alvarel
-        </Link>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <li>
-              <Link href="/" className="hover:text-primary-600">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="#stack" className="hover:text-primary-600">
-                Stack
-              </Link>
-            </li>
-            <li>
-              <Link href="#projects" className="hover:text-primary-600">
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link href="/blogs" className="hover:text-primary-600">
-                Blog
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div className="relative mb-10 w-full">
+      <Navbar>
+        {/* Desktop Navigation */}
+        <NavBody>
+          <NavbarLogo />
+          <NavItems items={navItems} />
+          <div className="flex items-center gap-4">
+            <NavbarButton href={"/admin"} variant="primary">
+              Login
+            </NavbarButton>
+          </div>
+        </NavBody>
+
+        {/* Mobile Navigation */}
+        <MobileNav>
+          <MobileNavHeader>
+            <NavbarLogo />
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
+          </MobileNavHeader>
+
+          <MobileNavMenu
+            isOpen={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+          >
+            {navItems.map((item, idx) => (
+              <a
+                key={`mobile-link-${idx}`}
+                href={item.link}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="relative text-neutral-600 dark:text-neutral-300"
+              >
+                <span className="block">{item.name}</span>
+              </a>
+            ))}
+            <div className="flex w-full flex-col gap-4">
+              <NavbarButton
+                onClick={() => setIsMobileMenuOpen(false)}
+                variant="primary"
+                className="w-full"
+              >
+                Login
+              </NavbarButton>
+            </div>
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
+
+      {/* Navbar */}
+    </div>
   );
 };
 

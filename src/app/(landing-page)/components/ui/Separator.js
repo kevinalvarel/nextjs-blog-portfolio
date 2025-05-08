@@ -3,7 +3,7 @@ import ScrollVelocity from "../../animations/ScrollVelocity/ScrollVelocity";
 
 const Separator = () => {
   return (
-    <div className="py-32">
+    <div className="my-10">
       <ScrollVelocity
         texts={["Kevin Alvarel", "Portofolio Blog"]}
         velocity={100}

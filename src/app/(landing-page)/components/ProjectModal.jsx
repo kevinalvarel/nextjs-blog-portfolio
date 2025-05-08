@@ -23,7 +23,7 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
         className="bg-gray-900 rounded-lg max-w-4xl w-11/12 max-h-[90vh] overflow-y-auto p-12 h-10/12"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between mb-3">
+        <div className="flex justify-between mb-3 mx-3">
           <h2 className="text-2xl font-bold text-primary-50">
             {project.title}
           </h2>
@@ -36,15 +36,15 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
           </button>
         </div>
         <div className="flex flex-col md:flex-row gap-6">
-          <div className="space-y-4 md:w-1/2">
+          <div className="space-y-4 md:w-1/2 mx-3">
             <p className="text-gray-300">{project.description}</p>
             <p className="text-gray-300">{project.fullDescription}</p>
-            <div className="py-4">
+            <div className="py-4 flex">
               <Link
-                className="text-gray-300 hover:text-white cursor-pointer text-center px-4"
+                className="text-gray-300 hover:text-white text-center px-4 mx-auto "
                 href={project.link}
               >
-                <button className="font-bold flex items-center justify-center">
+                <button className="font-semibold cursor-pointer bg-slate-800 p-3 rounded-xl">
                   Preview
                 </button>
               </Link>
@@ -60,7 +60,7 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
               </ul>
             </div>
           </div>
-          <div className="relative h-64 w-full md:w-1/2">
+          <div className="relative h-64 w-full md:w-1/2 mx-3">
             <Image
               src={project.image}
               alt={project.title}
