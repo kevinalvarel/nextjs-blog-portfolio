@@ -75,7 +75,9 @@ const HeroSection = () => {
         </p>
         <div className="flex mt-10 gap-4">
           <button className="button-primary">
-            <a href="">Download CV</a>
+            <a href="https://drive.google.com/uc?export=download&id=15u3IrSxen48IYpYwPXV8F7rsWE6UJZke">
+              Download CV
+            </a>
           </button>
           <Link href={"/blogs"}>
             <button className="button-secondary hover:button-primary transition-all cursor-pointer">
