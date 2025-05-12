@@ -48,6 +48,17 @@ const ProjectSection = () => {
       link: "https://online-course-git-master-kevin-alvarels-projects.vercel.app/",
       techStack: ["NextJS", "TailwindCSS", "Javascript"],
     },
+    {
+      id: 5,
+      title: "Onebee Class",
+      tags: ["NextJs", "React", "Aceternity UI", "TailwindCSS"],
+      description: "Informatics Engineering Class Website",
+      fullDescription:
+        "This project uses NextJS to build the front-end and TailwindCSS for styling. Thanks to Aceternity UI for the Components",
+      image: "/Onebee.png",
+      link: "https://onebeefik.vercel.app/",
+      techStack: ["NextJS", "TailwindCSS", "Javascript", "Aceternity UI"],
+    },
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
