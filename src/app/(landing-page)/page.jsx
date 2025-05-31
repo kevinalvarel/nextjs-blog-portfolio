@@ -5,6 +5,7 @@ import Stack from "./components/Stack";
 import Separator from "./components/ui/Separator";
 import HoverText from "./components/HoverText";
 import Header from "./components/Header";
+import SertificateSection from "./components/SertificateSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Separator />
       <ProjectSection />
       <HoverText />
+      <SertificateSection />
       <PostsSection />
     </div>
   );

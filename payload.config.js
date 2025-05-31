@@ -5,7 +5,7 @@ import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { buildConfig } from "payload";
 import { Posts } from "./src/app/collections/Posts";
-import { Media } from "@/app/collections/Media";
+import { Media } from "./src/app/collections/Media";
 export default buildConfig({
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),

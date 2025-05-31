@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@payload-config": [
-        "./payload.config.js"
+      "@/*": ["src/*"],
+      "@payload-config": ["payload.config.js"],
+      "@/app/*": ["app/*"],
+      "@payloadcms/next/routes": ["./node_modules/@payloadcms/next/routes"],
+      "@payloadcms/storage-vercel-blob": [
+        "./node_modules/@payloadcms/storage-vercel-blob"
       ]
     }
   }
