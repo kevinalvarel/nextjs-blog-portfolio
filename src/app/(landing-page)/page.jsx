@@ -2,8 +2,6 @@ import ProjectSection from "./components/ProjectSection";
 import PostsSection from "./components/PostsSection";
 import HeroSection from "./components/HeroSection";
 import Stack from "./components/Stack";
-import Separator from "./components/ui/Separator";
-import HoverText from "./components/HoverText";
 import Header from "./components/Header";
 import SertificateSection from "./components/SertificateSection";
 
@@ -13,9 +11,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <Stack />
-      <Separator />
       <ProjectSection />
-      <HoverText />
       <SertificateSection />
       <PostsSection />
     </div>

@@ -16,16 +16,16 @@ import {
 const Header = () => {
   const navItems = [
     {
-      name: "Home",
-      link: "/",
-    },
-    {
       name: "Stack",
       link: "#stack",
     },
     {
       name: "Project",
       link: "#projects",
+    },
+    {
+      name: "Certificate",
+      link: "#certificate",
     },
     {
       name: "Blogs",

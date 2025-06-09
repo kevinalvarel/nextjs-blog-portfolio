@@ -2,7 +2,7 @@ import GlareHover from "./ui/GlareHover";
 
 const SertificateSection = () => {
   return (
-    <div className="my-20">
+    <div className="my-20" id="certificate">
       <div className="flex justify-center py-5">
         <h1 className="font-bold text-3xl">Certificate</h1>
       </div>
