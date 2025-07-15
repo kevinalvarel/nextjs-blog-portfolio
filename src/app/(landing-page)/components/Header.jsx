@@ -73,7 +73,6 @@ const Header = () => {
                 <span className="block">{item.name}</span>
               </a>
             ))}
-            <div className="flex w-full flex-col gap-4"></div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
