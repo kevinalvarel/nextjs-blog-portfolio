@@ -42,11 +42,6 @@ const Header = () => {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
-            <NavbarButton href={"/admin"} variant="primary">
-              Login
-            </NavbarButton>
-          </div>
         </NavBody>
 
         {/* Mobile Navigation */}
